@@ -1,5 +1,6 @@
 package com.example.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,9 +19,10 @@ public class Users {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private UserType type; //Only student or Staff
+    private UserType type;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "department_Id")
     private Department department;
 }

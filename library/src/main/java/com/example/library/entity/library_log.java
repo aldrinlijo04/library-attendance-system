@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-
+/* hi */
 @Entity
 @Data
 public class library_log {
@@ -16,10 +16,10 @@ public class library_log {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private users user;
+    private Users user;
 
     private LocalDateTime inTime;
-    private LocalDateTime outTime;q
+    private LocalDateTime outTime;
 
     public Duration getDuration() {
         if (inTime != null && outTime != null) {

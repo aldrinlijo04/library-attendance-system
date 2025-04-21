@@ -1,7 +1,7 @@
 package com.example.library.controller;
 
-import com.example.library.entity.department;
-import com.example.library.service.deptService;
+import com.example.library.entity.Department;
+import com.example.library.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,14 +9,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="/api/dept")
-public class deptController {
+public class DeptController {
 
     @Autowired
-    private deptService deptService;
+    private DeptService deptService;
 
     //To fetch all the pre-stored departments from db
     @GetMapping("/get")
-    public List<department> listDepartments(){
+    public List<Department> listDepartments(){
         return deptService.listDept();
     }
 

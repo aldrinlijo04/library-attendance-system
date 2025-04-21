@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class department {
+public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,5 +17,5 @@ public class department {
     private String deptFull;
 
     @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
-    private List<users> users;
+    private List<Users> users;
 }

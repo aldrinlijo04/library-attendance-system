@@ -5,8 +5,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class users {
-
+public class Users {
     @Id
     private Long userId;
 
@@ -22,6 +21,6 @@ public class users {
     private UserType type; //Only student or Staff
 
     @ManyToOne
-    @JoinColumn(name = "department_Id", nullable = false)
-    private department department;
+    @JoinColumn(name = "department_Id")
+    private Department department;
 }
